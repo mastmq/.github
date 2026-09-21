@@ -12,8 +12,28 @@ Brand assets for mast.
 | `mark-256.png` | The same at a sensible size. |
 | `mascot.png` | The mascot, 1254x1254. It wears the lockup, so it stands in for the logo where there is room for personality. |
 | `mascot-512.png` | The same, sized for a README. |
-| `banner.png` | Wide lockup for the top of a README, 1280x360. |
-| `banner-640.png` | The same at half size, for a narrower column. |
+| `banner.png` | Dark banner, 1280x400. The default, and the one that works on both GitHub themes. |
+| `banner@2x.png` | The same at 2560x800, for retina. |
+| `banner-light.png` | Light banner, for a light-only surface. |
+| `banner-light@2x.png` | The same at 2x. |
+| `banner.svg` / `banner-light.svg` | The sources. Edit these, not the PNGs. |
+| `banner.py` | Regenerates every banner from the SVG sources. |
+
+## Regenerating the banners
+
+The banners are drawn, not composited from a screenshot, so they can be
+changed without redrawing anything:
+
+```console
+$ python3 assets/banner.py && rsvg-convert -w 1280 -h 400 -o banner.png banner.svg
+```
+
+Three things in there were decided by looking at the render rather than by
+reasoning about it. The beacon extends its own bar upward so it sits on the
+mast rather than floating above it. The bar field on the right starts clear
+of the longest line of text, because running it underneath softened the
+subtitle. And its opacity falls with distance, so it reads as one signal
+continuing off the edge instead of a scatter.
 
 ## There is deliberately no favicon here
 

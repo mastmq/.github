@@ -1,6 +1,9 @@
 <div align="center">
-  <h1>Mast</h1>
-  <img src="https://raw.githubusercontent.com/mastmq/.github/main/assets/mascot-512.png" alt="mast" width="220">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mastmq/.github/main/assets/banner.png">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mastmq/.github/main/assets/banner-light.png">
+    <img src="https://raw.githubusercontent.com/mastmq/.github/main/assets/banner.png" alt="mast — a multi-tenant MQTT broker built on core NATS">
+  </picture>
 </div>
 
 

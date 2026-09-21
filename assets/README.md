@@ -12,28 +12,29 @@ Brand assets for mast.
 | `mark-256.png` | The same at a sensible size. |
 | `mascot.png` | The mascot, 1254x1254. It wears the lockup, so it stands in for the logo where there is room for personality. |
 | `mascot-512.png` | The same, sized for a README. |
-| `banner.png` | Dark banner, 1280x400. The default, and the one that works on both GitHub themes. |
+| `banner.png` | Dark banner, 1280x400, with the mascot. The default. |
 | `banner@2x.png` | The same at 2560x800, for retina. |
-| `banner-light.png` | Light banner, for a light-only surface. |
+| `banner-light.png` | Light banner. Pair it with the dark one in a `<picture>` so each GitHub theme gets its own. |
 | `banner-light@2x.png` | The same at 2x. |
-| `banner.svg` / `banner-light.svg` | The sources. Edit these, not the PNGs. |
-| `banner.py` | Regenerates every banner from the SVG sources. |
+| `banner.py` | The source. Edit this, not the PNGs — it renders all four. |
 
 ## Regenerating the banners
 
-The banners are drawn, not composited from a screenshot, so they can be
-changed without redrawing anything:
+`banner.py` is the whole source: it draws the layout as SVG, rasterises it, then composites `mascot.png` on top. Run it from inside `assets/`, with Pillow and `rsvg-convert` available.
 
 ```console
-$ python3 assets/banner.py && rsvg-convert -w 1280 -h 400 -o banner.png banner.svg
+$ cd assets && python3 banner.py
 ```
 
-Three things in there were decided by looking at the render rather than by
-reasoning about it. The beacon extends its own bar upward so it sits on the
-mast rather than floating above it. The bar field on the right starts clear
-of the longest line of text, because running it underneath softened the
-subtitle. And its opacity falls with distance, so it reads as one signal
-continuing off the edge instead of a scatter.
+### Why the mascot sits on a panel
+
+The mascot is a photograph on a white backdrop and cannot be cut out. Its backdrop measures `(251, 251, 251)` and its white t-shirt measures `(245, 243, 248)` — six levels apart, with no edge between them. Every threshold tight enough to keep the shirt leaves a halo, and every threshold loose enough to remove the backdrop eats holes in the shirt and the white fur. A flood fill from the frame edges fails for a second reason: the mascot's own dark body touches the bottom edge, so some seed points are inside the subject.
+
+So it is not cut out. Both banners draw a rounded panel in exactly the backdrop's own colour and place the mascot inside it. What would have been a seam becomes a deliberate card, and a soft shadow under the panel does the work the cutout was supposed to do.
+
+### Decisions made by looking, not by reasoning
+
+The beacon extends its own bar upward so it sits on the mast rather than floating above it. The mascot bleeds off the bottom edge instead of standing clear of it, because a figure with air underneath reads as pasted in. And the mark is placed left of the text rather than above it: stacked, the banner needed more height than 400px and GitHub renders it smaller for the trouble.
 
 ## There is deliberately no favicon here
 

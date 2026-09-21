@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/mastmq/.github/main/assets/logo-256.png" alt="mast" width="160" align="right">
+<img src="https://raw.githubusercontent.com/mastmq/.github/main/assets/mascot-512.png" alt="mast" width="220" align="right">
 
 # mast
 

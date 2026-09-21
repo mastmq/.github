@@ -10,6 +10,8 @@ Brand assets for mast.
 | `logo-128.png` | Small inline use. |
 | `mark.png` | The mark alone, no wordmark, for places the word would be redundant or too small to read. |
 | `mark-256.png` | The same at a sensible size. |
+| `mascot.png` | The mascot, 1254x1254. It wears the lockup, so it stands in for the logo where there is room for personality. |
+| `mascot-512.png` | The same, sized for a README. |
 
 ## There is deliberately no favicon here
 

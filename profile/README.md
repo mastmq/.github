@@ -1,6 +1,8 @@
-<img src="https://raw.githubusercontent.com/mastmq/.github/main/assets/mascot-512.png" alt="mast" width="220" align="right">
+<div align="center">
+  <h1>Mast</h1>
+  <img src="https://raw.githubusercontent.com/mastmq/.github/main/assets/mascot-512.png" alt="mast" width="220">
+</div>
 
-# mast
 
 **A multi-tenant MQTT broker built on core NATS.** One binary, from a single edge box to a clustered fleet.
 

@@ -12,6 +12,8 @@ Brand assets for mast.
 | `mark-256.png` | The same at a sensible size. |
 | `mascot.png` | The mascot, 1254x1254. It wears the lockup, so it stands in for the logo where there is room for personality. |
 | `mascot-512.png` | The same, sized for a README. |
+| `banner.png` | Wide lockup for the top of a README, 1280x360. |
+| `banner-640.png` | The same at half size, for a narrower column. |
 
 ## There is deliberately no favicon here
 
@@ -27,4 +29,6 @@ Sampled from the artwork rather than specified in advance, so treat them as the 
 | --- | --- |
 | Orange | `#F2711C` |
 | Charcoal | `#4A4A4A` |
-| Ground | `#F4F4F4` — off-white, not pure white |
+| Ground | `#F3F3F3` — off-white, not pure white |
+
+The ground is sampled from the artwork rather than chosen. Compositing onto `#F4F4F4` instead left the lockup sitting in a faintly visible box one shade off its surroundings, which is the kind of thing nobody sees until they do.

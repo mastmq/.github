@@ -35,10 +35,11 @@ mast is the combination that does not otherwise exist: MQTT 5 with shared subscr
 | [charts](https://github.com/mastmq/charts) | Helm charts |
 | [docs](https://github.com/mastmq/docs) | Architecture notes and operational guides |
 | [bench](https://github.com/mastmq/bench) | Load and latency benchmarks |
+| [mochi](https://github.com/mastmq/mochi) | The MQTT library the broker embeds, carrying fixes upstream has not merged |
 | [mastmq.github.io](https://github.com/mastmq/mastmq.github.io) | The website, at [mastmq.github.io](https://mastmq.github.io/) |
 
 ## Status
 
-Early, and honest about it. The broker runs, moves messages across a cluster with tenant isolation, honours QoS 0 through 2, replays retained messages and resumes persistent sessions. Gaps are tracked as issues rather than described as roadmap: see [the parity label](https://github.com/mastmq/mast/issues?q=is%3Aissue+is%3Aopen+label%3Aparity) for what an MQTT client is entitled to assume and does not yet get.
+Early, and honest about it. The broker runs, moves messages across a cluster with tenant isolation, honours QoS 0 through 2, replays retained messages, and carries a persistent session from one node to another. Gaps are tracked as issues rather than described as roadmap: see [the parity label](https://github.com/mastmq/mast/issues?q=is%3Aissue+is%3Aopen+label%3Aparity) for what an MQTT client is entitled to assume and does not yet get.
 
 Apache 2.0.

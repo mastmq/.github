@@ -33,6 +33,7 @@ mast is the combination that does not otherwise exist: MQTT 5 with shared subscr
 | --- | --- |
 | [mast](https://github.com/mastmq/mast) | The broker |
 | [charts](https://github.com/mastmq/charts) | Helm charts |
+| [ansible](https://github.com/mastmq/ansible) | An Ansible collection for virtual machines and bare metal |
 | [docs](https://github.com/mastmq/docs) | Architecture notes and operational guides |
 | [bench](https://github.com/mastmq/bench) | Load and latency benchmarks |
 | [mochi](https://github.com/mastmq/mochi) | The MQTT library the broker embeds, carrying fixes upstream has not merged |
